@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://fwj1gqv3rkf8"]
+
+[ext_resource type="Script" path="res://lib/player.gd" id="1_8kw7v"]
+[ext_resource type="PackedScene" uid="uid://ddef6ra1ayndt" path="res://models/character/player/character.tscn" id="1_xqn0m"]
+[ext_resource type="AnimationLibrary" uid="uid://d0ryws7s2ddil" path="res://assets/animation/player/player.res" id="2_7na55"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hdbwc"]
+size = Vector3(0.493271, 0.809082, 0.421814)
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_8kw7v")
+
+[node name="Character" parent="." instance=ExtResource("1_xqn0m")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.407384, 0.0545959)
+shape = SubResource("BoxShape3D_hdbwc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Character")
+libraries = {
+"player": ExtResource("2_7na55")
+}

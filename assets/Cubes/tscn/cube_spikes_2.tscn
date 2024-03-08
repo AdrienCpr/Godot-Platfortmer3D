@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://q0212cout78s"]
+
+[ext_resource type="PackedScene" uid="uid://bsw1gfa1lph0t" path="res://assets/Cubes/glTF/Cube_Spikes.gltf" id="1_d8fr2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cxvij"]
+size = Vector3(1.99127, 2.03845, 1.97876)
+
+[node name="Cube_Spikes2" instance=ExtResource("1_d8fr2")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00430298, 0.00097473, 0.00939941)
+shape = SubResource("BoxShape3D_cxvij")

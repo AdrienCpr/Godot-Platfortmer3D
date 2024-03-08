@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cphvcrgw6sj8r"]
+
+[ext_resource type="PackedScene" uid="uid://cvur4y4cvgsto" path="res://assets/Level and Mechanics/glTF/Arrow.gltf" id="1_bdu6e"]
+
+[node name="Arrow2" instance=ExtResource("1_bdu6e")]

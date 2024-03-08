@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://btrprxb0o7mkv"]
+
+[ext_resource type="Shader" path="res://lib/shaders/shaders.gdshader" id="1_byhnh"]
+[ext_resource type="Script" path="res://lib/pause.gd" id="1_emris"]
+[ext_resource type="Texture2D" uid="uid://bw2jop2wjn3tv" path="res://assets/texture/white.png" id="2_iv2jv"]
+[ext_resource type="FontFile" uid="uid://c5iqr7kaur2c1" path="res://assets/Fonts/letters/GamepauseddemoRegular-RpmY6.otf" id="3_b0yr7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1lqmu"]
+shader = ExtResource("1_byhnh")
+shader_parameter/amount = 1.034
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_emris")
+
+[node name="Blur" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_1lqmu")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iv2jv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -27.0
+offset_right = 52.5
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_b0yr7")
+text = "Continue"
+
+[node name="GoHome" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_b0yr7")
+text = "Return Home"
+
+[node name="ButtonQuit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_b0yr7")
+text = "Save and Quit"
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/GoHome" to="." method="_on_go_home_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonQuit" to="." method="_on_button_quit_pressed"]

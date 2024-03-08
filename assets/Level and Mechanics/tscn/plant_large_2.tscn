@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://clcsym25ip3so"]
+
+[ext_resource type="PackedScene" uid="uid://drs1u222o3vdx" path="res://assets/Level and Mechanics/glTF/Plant_Large.gltf" id="1_sgv56"]
+
+[node name="Plant_Large2" instance=ExtResource("1_sgv56")]

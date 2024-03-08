@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlu4bwbnsgvsa"]
+
+[ext_resource type="PackedScene" uid="uid://d3bstbeuu8ymj" path="res://assets/Nature/glTF/Cloud_3.gltf" id="1_ghud2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qo5hf"]
+size = Vector3(4.79486, 1.9433, 1)
+
+[node name="Cloud_32" instance=ExtResource("1_ghud2")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197823, 0.553362, 0)
+shape = SubResource("BoxShape3D_qo5hf")

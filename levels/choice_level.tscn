@@ -1,0 +1,1147 @@
+[gd_scene load_steps=40 format=3 uid="uid://b0e8bb88mjjc"]
+
+[ext_resource type="Script" path="res://lib/choice_level.gd" id="1_cbueh"]
+[ext_resource type="Script" path="res://lib/spawn_point.gd" id="1_qmw1l"]
+[ext_resource type="Texture2D" uid="uid://dhuej3enddfkb" path="res://assets/texture/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="2_bxcay"]
+[ext_resource type="PackedScene" uid="uid://pjr0kno8invs" path="res://assets/Cubes/tscn/cube_grass_single_2.tscn" id="5_1wfl0"]
+[ext_resource type="PackedScene" uid="uid://q0212cout78s" path="res://assets/Cubes/tscn/cube_spikes_2.tscn" id="5_bc4c1"]
+[ext_resource type="PackedScene" uid="uid://bujn67ap5gbt6" path="res://assets/Cubes/tscn/cube_question_2.tscn" id="6_c4ob4"]
+[ext_resource type="PackedScene" uid="uid://d2jfbmtfdmdlu" path="res://scenes/assets_interaction/teleport.tscn" id="7_dvpwa"]
+[ext_resource type="PackedScene" uid="uid://b8vobi7rdbcac" path="res://assets/Cubes/tscn/cube_exclamation_2.tscn" id="7_esmt3"]
+[ext_resource type="PackedScene" uid="uid://5j8gvmomwf54" path="res://assets/Cubes/tscn/cube_dirt_single_2.tscn" id="8_m0f0k"]
+[ext_resource type="PackedScene" uid="uid://b5e3pxu1y3atw" path="res://assets/Cubes/tscn/cube_default_2.tscn" id="9_ckp7i"]
+[ext_resource type="PackedScene" uid="uid://b05rwlhqm1h3k" path="res://assets/Cubes/tscn/cube_crate_2.tscn" id="10_yr1ra"]
+[ext_resource type="PackedScene" uid="uid://cxeen00uqax8o" path="res://assets/Cubes/tscn/cube_bricks_2.tscn" id="11_intqn"]
+[ext_resource type="PackedScene" uid="uid://cp8mr065ofs78" path="res://assets/Level and Mechanics/tscn/stairs_modular_start_2.tscn" id="12_ld61t"]
+[ext_resource type="PackedScene" uid="uid://cls5uwltcl7ls" path="res://assets/Level and Mechanics/tscn/stairs_modular_middle_2.tscn" id="13_5yat6"]
+[ext_resource type="PackedScene" uid="uid://byv245o5bhh5u" path="res://assets/Level and Mechanics/tscn/stairs_modular_end_2.tscn" id="14_fjf62"]
+[ext_resource type="PackedScene" uid="uid://bg1q3ump5jtpx" path="res://assets/Nature/tscn/bush.tscn" id="15_1t2fe"]
+[ext_resource type="PackedScene" uid="uid://cbm8yugsyrjod" path="res://assets/Nature/tscn/bush_fruit.tscn" id="16_ok3sp"]
+[ext_resource type="PackedScene" uid="uid://dwyjjw6yll0ke" path="res://assets/Nature/tscn/cloud_1.tscn" id="17_j77lk"]
+[ext_resource type="PackedScene" uid="uid://de58a1xlguob2" path="res://assets/Nature/tscn/cloud_2.tscn" id="18_x63cy"]
+[ext_resource type="PackedScene" uid="uid://dlu4bwbnsgvsa" path="res://assets/Nature/tscn/cloud_3.tscn" id="19_ccg0s"]
+[ext_resource type="PackedScene" uid="uid://b2jm0abduph2p" path="res://assets/Nature/tscn/fruit.tscn" id="20_tvhp8"]
+[ext_resource type="PackedScene" uid="uid://dp0u6j8bek60k" path="res://assets/Nature/tscn/grass_1.tscn" id="21_afcxr"]
+[ext_resource type="PackedScene" uid="uid://dvst23n8letf3" path="res://assets/Nature/tscn/grass_2.tscn" id="22_43u0w"]
+[ext_resource type="PackedScene" uid="uid://bgx6iu4ttabxp" path="res://assets/Nature/tscn/grass_3.tscn" id="23_gmpi7"]
+[ext_resource type="PackedScene" uid="uid://ddnxbo34ro2jl" path="res://assets/Nature/tscn/rock_1.tscn" id="24_dw7yp"]
+[ext_resource type="PackedScene" uid="uid://buyuqj46vhnge" path="res://assets/Nature/tscn/rock_2.tscn" id="25_kojch"]
+[ext_resource type="PackedScene" uid="uid://cvckmdbe16jjm" path="res://assets/Nature/tscn/rock_platforms_1.tscn" id="26_bjjtx"]
+[ext_resource type="PackedScene" uid="uid://cjlcvvd8nathl" path="res://assets/Nature/tscn/rock_platforms_2.tscn" id="27_d2v8o"]
+[ext_resource type="PackedScene" uid="uid://dqy7pv4md1ioq" path="res://assets/Nature/tscn/rock_platforms_3.tscn" id="28_18qan"]
+[ext_resource type="PackedScene" uid="uid://dj8irrmdhpgaj" path="res://assets/Nature/tscn/rock_platforms_large.tscn" id="29_q3odv"]
+[ext_resource type="PackedScene" uid="uid://dm1cd6hdtdxy2" path="res://assets/Nature/tscn/rock_platforms_medium.tscn" id="30_k68b8"]
+[ext_resource type="PackedScene" uid="uid://c1p7gswcxl14c" path="res://assets/Nature/tscn/rock_platform_tall.tscn" id="31_cnavr"]
+[ext_resource type="PackedScene" uid="uid://c47wgji18gjtj" path="res://assets/Nature/tscn/tree.tscn" id="32_562h4"]
+[ext_resource type="PackedScene" uid="uid://fxwxnq61kwvr" path="res://assets/Nature/tscn/tree_fruit_2.tscn" id="33_1aap0"]
+[ext_resource type="AudioStream" uid="uid://cg50l7l2p7ucr" path="res://assets/musics/choice_level/＂8 Bit Go!＂ Action Video Game Rock Music by HeatleyBros.wav" id="35_g47mp"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xxhjh"]
+panorama = ExtResource("2_bxcay")
+
+[sub_resource type="Sky" id="Sky_qphbo"]
+sky_material = SubResource("PanoramaSkyMaterial_xxhjh")
+
+[sub_resource type="Environment" id="Environment_15spg"]
+background_mode = 2
+background_energy_multiplier = 0.2
+sky = SubResource("Sky_qphbo")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5gxsj"]
+size = Vector3(57.1573, 1, 70.9426)
+
+[node name="ChoiceLevel" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_cbueh")
+key = "choice_level"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_15spg")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_color = Color(0.984314, 0.580392, 0.576471, 1)
+shadow_enabled = true
+
+[node name="Assets" type="Node3D" parent="."]
+
+[node name="Cube_Grass_Single15" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 8)
+
+[node name="Cube_Grass_Single14" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 8)
+
+[node name="Cube_Grass_Single12" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 8)
+
+[node name="Cube_Grass_Single11" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, 8)
+
+[node name="Cube_Grass_Single11" parent="Assets/Cube_Grass_Single11" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 1, -18)
+
+[node name="Cube_Grass_Single11" parent="Assets/Cube_Grass_Single11/Cube_Grass_Single11" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Grass_Single10" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 8)
+
+[node name="Cube_Grass_Single10" parent="Assets/Cube_Grass_Single10" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+
+[node name="Cube_Grass_Single10" parent="Assets/Cube_Grass_Single10/Cube_Grass_Single10" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Grass_Single10" parent="Assets/Cube_Grass_Single10/Cube_Grass_Single10/Cube_Grass_Single10" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Cube_Grass_Single10" parent="Assets/Cube_Grass_Single10/Cube_Grass_Single10/Cube_Grass_Single10/Cube_Grass_Single10" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+
+[node name="Cube_Grass_Single10" parent="Assets/Cube_Grass_Single10/Cube_Grass_Single10/Cube_Grass_Single10/Cube_Grass_Single10/Cube_Grass_Single10" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Grass_Single10" parent="Assets/Cube_Grass_Single10/Cube_Grass_Single10/Cube_Grass_Single10/Cube_Grass_Single10/Cube_Grass_Single10/Cube_Grass_Single10" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Cube_Grass_Single4" parent="Assets/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Cube_Grass_Single3" parent="Assets/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
+
+[node name="Cube_Grass_Single2" parent="Assets/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="Cube_Grass_Single4" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 2)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single4" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 6)
+
+[node name="Cube_Grass_Single4" parent="Assets/Cube_Grass_Single4" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 6)
+
+[node name="Cube_Grass_Single3" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 2)
+
+[node name="Cube_Grass_Single2" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Cube_Grass_Single4" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Cube_Grass_Single3" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
+
+[node name="Cube_Grass_Single2" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="Cube_Grass_Single4" parent="Assets/Cube_Grass_Single2" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="Cube_Grass_Single3" parent="Assets/Cube_Grass_Single2" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="Cube_Grass_Single2" parent="Assets/Cube_Grass_Single2" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube_Grass_Single6" parent="Assets/Cube_Grass_Single2" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8)
+
+[node name="Cube_Grass_Single6" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single6" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Grass_Single6" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single6/Cube_Grass_Single6" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="Cube_Grass_Single7" parent="Assets/Cube_Grass_Single2" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -6)
+
+[node name="Cube_Grass_Single8" parent="Assets/Cube_Grass_Single2" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="Cube_Grass_Single9" parent="Assets/Cube_Grass_Single2" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Grass_Single4" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="Cube_Grass_Single3" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="Cube_Grass_Single2" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube_Grass_Single6" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Cube_Grass_Single7" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 2)
+
+[node name="Cube_Grass_Single8" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2)
+
+[node name="Cube_Grass_Single9" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9/Cube_Grass_Single5/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Grass_Single6" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single6" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single5/Cube_Grass_Single6/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Grass_Single4" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="Cube_Grass_Single3" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="Cube_Grass_Single2" parent="Assets/Cube_Grass_Single2/Cube_Grass_Single9/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube_Grass_Single6" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single6" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Cube_Grass_Single4" parent="Assets/Cube_Grass_Single6" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Cube_Grass_Single3" parent="Assets/Cube_Grass_Single6" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
+
+[node name="Cube_Grass_Single2" parent="Assets/Cube_Grass_Single6" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="Cube_Grass_Single7" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1, 2)
+
+[node name="Cube_Grass_Single8" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1, 2)
+
+[node name="Cube_Grass_Single9" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Grass_Single5" parent="Assets/Cube_Grass_Single9/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Cube_Grass_Single4" parent="Assets/Cube_Grass_Single9/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Cube_Grass_Single3" parent="Assets/Cube_Grass_Single9/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
+
+[node name="Cube_Grass_Single2" parent="Assets/Cube_Grass_Single9/Cube_Grass_Single5" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="Cube_Grass_Single4" parent="Assets/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="Cube_Grass_Single3" parent="Assets/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="Cube_Grass_Single2" parent="Assets/Cube_Grass_Single9" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube_Spikes2" parent="Assets" instance=ExtResource("5_bc4c1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.601, 5.9277, 7.89098)
+
+[node name="Cube_Question2" parent="Assets" instance=ExtResource("6_c4ob4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9804, 5.86592, 9.15752)
+
+[node name="Cube_Grass_Single13" parent="Assets" instance=ExtResource("5_1wfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 2, -4)
+
+[node name="Cube_Exclamation2" parent="Assets" instance=ExtResource("7_esmt3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5983, 6.0323, 2.10832)
+
+[node name="Cube_Dirt_Single2" parent="Assets" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1, -2)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single3" parent="Assets/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single3" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single4" parent="Assets/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single4" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single3" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single4" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single4/Cube_Dirt_Single3" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 10)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 3, 4)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Dirt_Single5" parent="Assets/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single3" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single3" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single4" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single3" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single3" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single3" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single3/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single3" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single3" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single3/Cube_Dirt_Single3" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single3/Cube_Dirt_Single3/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Dirt_Single2" parent="Assets/Cube_Dirt_Single2/Cube_Dirt_Single5/Cube_Dirt_Single4/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2/Cube_Dirt_Single3/Cube_Dirt_Single3/Cube_Dirt_Single2/Cube_Dirt_Single2" instance=ExtResource("8_m0f0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default2" parent="Assets" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 5, -13)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, -4, 3)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default3" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default3" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default3" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, 2)
+
+[node name="Cube_Default3" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -2)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1, -2)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -3, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -3, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -3, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4/Cube_Default4/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -3, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default2/Cube_Default2/Cube_Default3/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -4)
+
+[node name="Cube_Default3" parent="Assets/Cube_Default2/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default3" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default4" parent="Assets/Cube_Default2/Cube_Default2" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, 0)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default3" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Default2" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4/Cube_Default3" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, -2)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 20)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default6" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default6" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default6/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default6/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default6/Cube_Default5/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default5" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4/Cube_Default5/Cube_Default5/Cube_Default6/Cube_Default5/Cube_Default5/Cube_Default5/Cube_Default5" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Default6" parent="Assets/Cube_Default2/Cube_Default2/Cube_Default4" instance=ExtResource("9_ckp7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 0)
+
+[node name="Cube_Crate2" parent="Assets" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4, -14)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -4, 3)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 1, 3)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 8)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, -1, -10)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate3/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate3/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate3/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, -2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Crate2" parent="Assets/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate3/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2/Cube_Crate2" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Cube_Bricks2" parent="Assets" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 7, -9)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37, -3, -3)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 6)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 4)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube_Bricks3" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Cube_Bricks2" parent="Assets/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks2/Cube_Bricks3" instance=ExtResource("11_intqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Stairs_Modular_Start2" parent="Assets" instance=ExtResource("12_ld61t")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Stairs_Modular_Start2" parent="Assets/Stairs_Modular_Start2" instance=ExtResource("12_ld61t")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11, 2, 10)
+
+[node name="Stairs_Modular_Middle2" parent="Assets" instance=ExtResource("13_5yat6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 2)
+
+[node name="Stairs_Modular_Middle2" parent="Assets/Stairs_Modular_Middle2" instance=ExtResource("13_5yat6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -8.74228e-08)
+
+[node name="Stairs_Modular_Middle2" parent="Assets/Stairs_Modular_Middle2/Stairs_Modular_Middle2" instance=ExtResource("13_5yat6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 1, 12)
+
+[node name="Stairs_Modular_End2" parent="Assets" instance=ExtResource("14_fjf62")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 3, 6)
+
+[node name="Stairs_Modular_End2" parent="Assets/Stairs_Modular_End2" instance=ExtResource("14_fjf62")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -17, 1, 14)
+
+[node name="Cube_Crate3" parent="Assets" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, -8)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate4" parent="Assets/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate4" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate4" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate4" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate4" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -12)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3/Cube_Crate3" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate4" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate4" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Cube_Crate3" parent="Assets/Cube_Crate3/Cube_Crate3/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4/Cube_Crate4" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Cube_Crate4" parent="Assets" instance=ExtResource("10_yr1ra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 4, -10)
+
+[node name="Tp_lvl_1" parent="." instance=ExtResource("7_dvpwa")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -13.1588, 4.81843, 5.40913)
+destination = "level_1"
+
+[node name="SpawnPoint_Level1" type="Node3D" parent="Tp_lvl_1"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0.665822, -0.0477901)
+script = ExtResource("1_qmw1l")
+key = "level_1"
+
+[node name="SpawnPoint" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.6646, 1.1069, -2.97833)
+script = ExtResource("1_qmw1l")
+
+[node name="Bush2" parent="." instance=ExtResource("15_1t2fe")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 9, 0, 4)
+
+[node name="Bush_Fruit2" parent="." instance=ExtResource("16_ok3sp")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 9, 4, 7.91066)
+
+[node name="Cloud_12" parent="." instance=ExtResource("17_j77lk")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -8, 0, -5)
+
+[node name="Cloud_22" parent="." instance=ExtResource("18_x63cy")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -8, 1, -3)
+
+[node name="Cloud_22" parent="Cloud_22" instance=ExtResource("18_x63cy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2584, 4.99784, 2.71519)
+
+[node name="Cloud_22" parent="Cloud_22/Cloud_22" instance=ExtResource("18_x63cy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.80153, 0.751924, 4.87555)
+
+[node name="Cloud_32" parent="." instance=ExtResource("19_ccg0s")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -6.34088, 1.67966, -2.73128)
+
+[node name="Fruit2" parent="." instance=ExtResource("20_tvhp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14724, 0.2027, 2.30189)
+
+[node name="Grass_12" parent="." instance=ExtResource("21_afcxr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.14867, -0.959157, -6.22682)
+
+[node name="Grass_22" parent="." instance=ExtResource("22_43u0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.37759, -0.886825, -7.42189)
+
+[node name="Grass_32" parent="." instance=ExtResource("23_gmpi7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08684, -0.893372, -7.93925)
+
+[node name="Rock_12" parent="." instance=ExtResource("24_dw7yp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4574, 0.0201998, -4.14828)
+
+[node name="Rock_22" parent="." instance=ExtResource("25_kojch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.94728, 0.0201999, -5.64922)
+
+[node name="RockPlatforms_12" parent="." instance=ExtResource("26_bjjtx")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -6.91829, 0.0201999, -8.12608)
+
+[node name="RockPlatforms_22" parent="." instance=ExtResource("27_d2v8o")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -10.6204, 4.9382, 1.27844)
+
+[node name="RockPlatforms_32" parent="." instance=ExtResource("28_18qan")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 8.32589, 0.0201999, -6.23504)
+
+[node name="RockPlatforms_Large2" parent="." instance=ExtResource("29_q3odv")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -2.4726, 0.0201999, -6.73022)
+
+[node name="RockPlatforms_Medium2" parent="." instance=ExtResource("30_k68b8")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 4.96565, 0.0201999, -5.98663)
+
+[node name="RockPlatform_Tall2" parent="." instance=ExtResource("31_cnavr")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 3.63697, 0.0201999, 4.62557)
+
+[node name="Tree2" parent="." instance=ExtResource("32_562h4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.89045, 0.0201999, -8.85764)
+
+[node name="Tree_Fruit2" parent="." instance=ExtResource("33_1aap0")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 8.06505, 0.0201999, 2.39154)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("35_g47mp")
+attenuation_model = 3
+autoplay = true
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0619, -5.79212, -4.05066)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_5gxsj")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

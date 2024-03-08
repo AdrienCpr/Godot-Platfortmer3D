@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxlpy0tn3eut6"]
+
+[ext_resource type="PackedScene" uid="uid://3cuscq36ne5b" path="res://assets/Powerups and Pickups/tscn/star_outline_2.tscn" id="1_klbdk"]
+[ext_resource type="Script" path="res://lib/star_apparition.gd" id="1_sqlnb"]
+[ext_resource type="PackedScene" uid="uid://dkf8025y4rr8r" path="res://assets/Level and Mechanics/tscn/numbers_52.tscn" id="2_1hixw"]
+[ext_resource type="PackedScene" uid="uid://beynindbdv801" path="res://assets/Level and Mechanics/tscn/numbers_02.tscn" id="3_uhodm"]
+[ext_resource type="PackedScene" uid="uid://brf2alms68suv" path="res://assets/Powerups and Pickups/tscn/coin.tscn" id="4_k7o2f"]
+[ext_resource type="PackedScene" uid="uid://rdw5bw71usni" path="res://scenes/powerups/star.tscn" id="5_xglgd"]
+
+[node name="StarApparition" type="Node3D"]
+script = ExtResource("1_sqlnb")
+
+[node name="Star_Outline2" parent="." instance=ExtResource("1_klbdk")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+
+[node name="Text" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14835, 0, 0)
+
+[node name="Numbers_52" parent="Text" instance=ExtResource("2_1hixw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.27766, 1, 0)
+
+[node name="Numbers_02" parent="Text" instance=ExtResource("3_uhodm")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 1, 0)
+
+[node name="Coin" parent="Text" instance=ExtResource("4_k7o2f")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.451009, 0.972051, 0)
+
+[node name="Star" parent="." instance=ExtResource("5_xglgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29761, 0)
+level = "level_1"
+type = "coin"

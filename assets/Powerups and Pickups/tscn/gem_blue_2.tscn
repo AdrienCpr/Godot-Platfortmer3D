@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://vgyfn2dc3r4o"]
+
+[ext_resource type="PackedScene" uid="uid://cv4w1wfsw0apq" path="res://assets/Powerups and Pickups/glTF/Gem_Blue.gltf" id="1_we8ns"]
+
+[node name="Gem_Blue2" instance=ExtResource("1_we8ns")]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://codvp5vdekk8j"]
+
+[ext_resource type="Script" path="res://lib/main.gd" id="1_vdnam"]
+[ext_resource type="PackedScene" uid="uid://fwj1gqv3rkf8" path="res://scenes/player.tscn" id="2_qhmnw"]
+[ext_resource type="PackedScene" uid="uid://du53pgiqn13ea" path="res://ui/ui_level.tscn" id="3_wx5ob"]
+[ext_resource type="PackedScene" uid="uid://btrprxb0o7mkv" path="res://ui/pause.tscn" id="4_x5qf6"]
+[ext_resource type="AudioStream" uid="uid://b5dx035mfd2d8" path="res://assets/sounds/coin.wav" id="5_xpcpl"]
+[ext_resource type="AudioStream" uid="uid://c3cs8pig51y4x" path="res://assets/sounds/heart.wav" id="6_hjwgl"]
+[ext_resource type="AudioStream" uid="uid://binc6pkil0kes" path="res://assets/sounds/star.wav" id="7_5m1im"]
+[ext_resource type="AudioStream" uid="uid://cxg5245xcbxnb" path="res://assets/sounds/chest.wav" id="8_4v1sx"]
+
+[node name="Main" type="Node3D"]
+process_mode = 3
+script = ExtResource("1_vdnam")
+
+[node name="UiLevel" parent="." instance=ExtResource("3_wx5ob")]
+
+[node name="Player" parent="." instance=ExtResource("2_qhmnw")]
+process_mode = 1
+
+[node name="Pause" parent="." instance=ExtResource("4_x5qf6")]
+
+[node name="eject_timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Coin" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_xpcpl")
+volume_db = 20.328
+bus = &"Item"
+
+[node name="Heart" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_hjwgl")
+volume_db = 30.0
+bus = &"Item"
+
+[node name="Key" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_xpcpl")
+volume_db = 20.0
+bus = &"Item"
+
+[node name="Star" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_5m1im")
+bus = &"Item"
+
+[node name="Chest" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_4v1sx")
+bus = &"Item"
+
+[connection signal="iteraction_detected" from="Player" to="." method="_on_player_iteraction_detected"]
+[connection signal="iteraction_detected_end" from="Player" to="." method="_on_player_iteraction_detected_end"]
+[connection signal="cancel_pause" from="Pause" to="." method="_on_pause_cancel_pause"]
+[connection signal="home_pause" from="Pause" to="." method="_on_pause_home_pause"]
+[connection signal="timeout" from="eject_timer" to="." method="_on_eject_timer_timeout"]

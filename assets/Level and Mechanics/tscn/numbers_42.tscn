@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cykhribfm7yg5"]
+
+[ext_resource type="PackedScene" uid="uid://bwraudjdeg8bs" path="res://assets/Level and Mechanics/glTF/Numbers_4.gltf" id="1_qtl5s"]
+
+[node name="Numbers_42" instance=ExtResource("1_qtl5s")]

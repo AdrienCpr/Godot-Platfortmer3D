@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnbtxbmmrfbop"]
+
+[ext_resource type="PackedScene" uid="uid://bou6mgyfhflki" path="res://assets/Level and Mechanics/glTF/Bouncer.gltf" id="1_wywnh"]
+
+[node name="Bouncer2" instance=ExtResource("1_wywnh")]

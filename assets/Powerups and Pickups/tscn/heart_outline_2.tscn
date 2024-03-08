@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://drq3f4a4xk6nw"]
+
+[ext_resource type="PackedScene" uid="uid://c6a8hx0nmv0l3" path="res://assets/Powerups and Pickups/glTF/Heart_Outline.gltf" id="1_rl11e"]
+
+[node name="Heart_Outline2" instance=ExtResource("1_rl11e")]

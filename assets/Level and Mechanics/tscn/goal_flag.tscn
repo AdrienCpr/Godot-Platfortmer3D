@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://biedgvb5yv40w"]
+
+[ext_resource type="PackedScene" uid="uid://dpwra3478rciq" path="res://assets/Level and Mechanics/glTF/Goal_Flag.gltf" id="1_brkod"]
+
+[node name="Goal_Flag" instance=ExtResource("1_brkod")]
+
+[node name="Goal_Flag" parent="." index="0"]
+layers = 3

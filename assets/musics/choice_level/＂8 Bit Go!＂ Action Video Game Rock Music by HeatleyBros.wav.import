@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cg50l7l2p7ucr"
+path="res://.godot/imported/＂8 Bit Go!＂ Action Video Game Rock Music by HeatleyBros.wav-f9ea8e2dafc4370b9cef41392d384678.sample"
+
+[deps]
+
+source_file="res://assets/musics/choice_level/＂8 Bit Go!＂ Action Video Game Rock Music by HeatleyBros.wav"
+dest_files=["res://.godot/imported/＂8 Bit Go!＂ Action Video Game Rock Music by HeatleyBros.wav-f9ea8e2dafc4370b9cef41392d384678.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

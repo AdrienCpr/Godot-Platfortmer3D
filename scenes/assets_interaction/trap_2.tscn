@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqstf5a2rseg2"]
+
+[ext_resource type="Script" path="res://lib/trap.gd" id="1_u5hsk"]
+[ext_resource type="PackedScene" uid="uid://c3tkomr4338qw" path="res://assets/Level and Mechanics/tscn/trap_2.tscn" id="2_f63cb"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7q7l6"]
+height = 0.162907
+radius = 1.87062
+
+[node name="Trap2" type="Node3D"]
+script = ExtResource("1_u5hsk")
+
+[node name="Trap_2" parent="." instance=ExtResource("2_f63cb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-0.180686, 0, 0, 0, 5.42594, 0, 0, 0, 0.18466, 0, 0.667682, 0)
+shape = SubResource("CylinderShape3D_7q7l6")

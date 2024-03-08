@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxatbkrlndmmd"]
+
+[ext_resource type="PackedScene" uid="uid://k8dxordvgyst" path="res://assets/Level and Mechanics/glTF/Stairs.gltf" id="1_xx0kc"]
+
+[node name="Stairs2" instance=ExtResource("1_xx0kc")]

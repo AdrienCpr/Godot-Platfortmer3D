@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2jfbmtfdmdlu"]
+
+[ext_resource type="Script" path="res://lib/level_change.gd" id="1_1traf"]
+[ext_resource type="PackedScene" uid="uid://biedgvb5yv40w" path="res://assets/Level and Mechanics/tscn/goal_flag.tscn" id="2_lrm5i"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mkeve"]
+
+[node name="Teleport" type="Node3D"]
+script = ExtResource("1_1traf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.439826, 0)
+shape = SubResource("CylinderShape3D_mkeve")
+
+[node name="Goal_Flag" parent="." instance=ExtResource("2_lrm5i")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)

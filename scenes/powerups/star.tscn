@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://rdw5bw71usni"]
+
+[ext_resource type="Script" path="res://lib/star.gd" id="1_oxvps"]
+[ext_resource type="PackedScene" uid="uid://dhykp2mqgeqje" path="res://assets/Powerups and Pickups/tscn/star.tscn" id="1_t4xar"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0t8h"]
+size = Vector3(2.5741, 2.65039, 6.3772)
+
+[node name="Star" type="Node3D"]
+script = ExtResource("1_oxvps")
+
+[node name="Star" parent="." instance=ExtResource("1_t4xar")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.531299, 0, 0, 0, 0.512586, 0, 0, 0, 0.102157, 0.017143, 0.0870996, 0.0113355)
+shape = SubResource("BoxShape3D_x0t8h")

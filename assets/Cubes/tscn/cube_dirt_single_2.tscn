@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://5j8gvmomwf54"]
+
+[ext_resource type="PackedScene" uid="uid://liu1carwa3ft" path="res://assets/Cubes/glTF/Cube_Dirt_Single.gltf" id="1_y1xv3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_aonid"]
+points = PackedVector3Array(-0.893221, -0.893219, -0.985648, 0.893186, 0.893227, 0.985656, 0.952217, 0.921466, 0.952259, 0.952217, -0.952259, 0.921466, -0.952249, -0.921456, 0.952248, -0.952249, 0.952248, -0.921456, 0.952217, 0.921466, -0.952259, -0.952233, 0.984052, 0.984052, 0.921422, -0.952256, -0.952256, -0.952233, -0.984052, -0.984052, 0.893186, 0.985656, -0.893227, 0.985554, -0.893348, -0.893348, 0.893186, -0.893227, 0.985656, -0.985572, 0.893324, 0.893324, 0.893186, -0.985656, 0.893227, 0.893186, 0.893227, -0.985656, 0.985554, 0.893348, 0.893348, -0.985572, -0.893324, -0.893324, -0.893221, -0.985648, 0.893219, 0.893186, 0.985656, 0.893227, -0.893221, 0.893219, -0.985648, -0.893221, 0.985648, -0.893219, -0.893221, -0.893219, 0.985648, 0.893186, -0.985656, -0.893227, 0.893186, -0.893227, -0.985656, -0.985572, 0.893324, -0.893324, -0.985572, -0.893324, 0.893324, 0.985554, -0.893348, 0.893348, 0.985554, 0.893348, -0.893348, -0.921458, 0.952248, -0.952248, -0.921458, -0.952248, 0.952248, 0.952217, 0.952259, 0.921466)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_la3dv"]
+size = Vector3(1.99127, 2.03845, 1.97876)
+
+[node name="Cube_Dirt_Single2" instance=ExtResource("1_y1xv3")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_aonid")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00430298, 0.00097473, 0.00939941)
+shape = SubResource("BoxShape3D_la3dv")

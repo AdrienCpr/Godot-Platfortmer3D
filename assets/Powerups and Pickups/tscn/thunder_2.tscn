@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmfm07ygjhge7"]
+
+[ext_resource type="PackedScene" uid="uid://b676if1v3osmv" path="res://assets/Powerups and Pickups/glTF/Thunder.gltf" id="1_vsrhe"]
+
+[node name="Thunder2" instance=ExtResource("1_vsrhe")]

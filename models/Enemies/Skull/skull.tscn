@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://chwyju1mph43c"]
+
+[ext_resource type="PackedScene" uid="uid://dvq7ci1cixvwy" path="res://models/Enemies/Skull/Skull.gltf" id="1_uv81p"]
+
+[node name="Skull2" instance=ExtResource("1_uv81p")]

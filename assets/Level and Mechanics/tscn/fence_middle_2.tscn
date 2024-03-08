@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cadcflb6klnhn"]
+
+[ext_resource type="PackedScene" uid="uid://q1eo72y761py" path="res://assets/Level and Mechanics/glTF/Fence_Middle.gltf" id="1_psn60"]
+
+[node name="Fence_Middle2" instance=ExtResource("1_psn60")]

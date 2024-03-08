@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://4oooqgfn3pr5"]
+
+[ext_resource type="PackedScene" uid="uid://idsb1vklnx2w" path="res://assets/Level and Mechanics/glTF/Hazard_SpikeTrap.gltf" id="1_4c7dg"]
+
+[node name="Hazard_SpikeTrap2" instance=ExtResource("1_4c7dg")]

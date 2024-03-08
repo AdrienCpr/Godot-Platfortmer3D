@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://tbj0wfmuas8p"]
+
+[ext_resource type="PackedScene" uid="uid://blhea464v8p35" path="res://assets/Level and Mechanics/glTF/Plant_Small.gltf" id="1_lq83y"]
+
+[node name="Plant_Small2" instance=ExtResource("1_lq83y")]

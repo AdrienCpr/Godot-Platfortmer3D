@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm8cwymyvn0ni"]
+
+[ext_resource type="PackedScene" uid="uid://hgtdql5f1qfi" path="res://models/character/player/Character_Gun.gltf" id="1_lpxo6"]
+
+[node name="Character_Gun" instance=ExtResource("1_lpxo6")]
+
+[node name="Skeleton3D" parent="CharacterArmature" index="0"]
+bones/1/rotation = Quaternion(7.85402e-06, 0.702952, 0.711237, 7.76252e-06)
+bones/4/rotation = Quaternion(0.166831, 4.319e-07, 1.0312e-07, 0.985986)
+bones/5/rotation = Quaternion(-0.0131587, -8.32261e-07, -2.94286e-09, 0.999913)
+bones/7/rotation = Quaternion(-0.0849531, -0.000274479, 2.3339e-05, 0.996385)
+bones/9/rotation = Quaternion(-0.16958, -0.00348858, -0.0161858, 0.985377)
+bones/12/rotation = Quaternion(-0.16958, 0.00348856, 0.0161858, 0.985377)
+bones/14/rotation = Quaternion(-0.0351301, 0.0121674, -0.410254, 0.911213)
+bones/15/rotation = Quaternion(0.571241, 0.439172, 0.410695, -0.558697)
+bones/16/rotation = Quaternion(-0.0494412, 0.26159, -0.343668, 0.900566)
+bones/18/rotation = Quaternion(-0.0351299, -0.0121668, 0.410254, 0.911213)
+bones/19/rotation = Quaternion(0.486989, -0.525322, -0.363379, -0.595679)
+bones/20/rotation = Quaternion(0.254011, -0.363127, 0.714015, 0.542033)
+bones/23/rotation = Quaternion(0.91014, 0.0136526, 0.00735962, 0.414011)
+bones/24/rotation = Quaternion(0.69221, 0.0113798, 0.0151245, 0.721448)
+bones/25/rotation = Quaternion(0.91014, -0.0136526, -0.00735885, 0.414011)
+bones/26/rotation = Quaternion(0.69221, -0.0113797, -0.0151244, 0.721448)
+bones/28/rotation = Quaternion(-7.85402e-06, 0.702952, 0.711237, -7.76252e-06)
+
+[node name="Gun" parent="CharacterArmature/Skeleton3D" index="0"]
+transform = Transform3D(1, -1.78814e-07, 3.50177e-07, -2.98023e-08, 1, 4.17233e-07, -2.68221e-07, -4.17233e-07, 1, -0.669282, 0.795996, 0.385078)

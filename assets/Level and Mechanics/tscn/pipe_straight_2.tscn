@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://1ek7e67c67j8"]
+
+[ext_resource type="PackedScene" uid="uid://bed8p8xrtxexc" path="res://assets/Level and Mechanics/glTF/Pipe_Straight.gltf" id="1_e4hpj"]
+
+[node name="Pipe_Straight2" instance=ExtResource("1_e4hpj")]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg1q3ump5jtpx"]
+
+[ext_resource type="PackedScene" uid="uid://csii8jssji4q3" path="res://assets/Nature/glTF/Bush.gltf" id="1_0ayl8"]
+
+[node name="Bush2" instance=ExtResource("1_0ayl8")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)

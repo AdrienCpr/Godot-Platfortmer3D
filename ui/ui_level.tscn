@@ -1,0 +1,149 @@
+[gd_scene load_steps=9 format=3 uid="uid://du53pgiqn13ea"]
+
+[ext_resource type="Script" path="res://lib/ui_level.gd" id="1_stpbp"]
+[ext_resource type="Texture2D" uid="uid://cdjcf1eg47ixr" path="res://assets/images/ui/heart.svg" id="2_bsb1o"]
+[ext_resource type="FontFile" uid="uid://c5iqr7kaur2c1" path="res://assets/Fonts/letters/GamepauseddemoRegular-RpmY6.otf" id="3_t86ug"]
+[ext_resource type="FontFile" uid="uid://d8yk2rr4gsn5" path="res://assets/Fonts/numbers/RenegadePursuit-ywMr5.ttf" id="4_kh4ff"]
+[ext_resource type="Texture2D" uid="uid://b53sxv5x1vr0p" path="res://assets/images/ui/coin.png" id="4_tdvr0"]
+[ext_resource type="Texture2D" uid="uid://boyx3mdugltq8" path="res://assets/images/ui/key.png" id="5_fk5xb"]
+[ext_resource type="Texture2D" uid="uid://di3yl1it3k12q" path="res://assets/images/ui/star.png" id="6_m37lo"]
+[ext_resource type="Texture2D" uid="uid://6a33o183gfys" path="res://assets/images/ui/star_empty.png" id="7_i6hwy"]
+
+[node name="UiLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_stpbp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Heart1" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_bsb1o")
+expand_mode = 1
+
+[node name="Heart2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_bsb1o")
+expand_mode = 1
+
+[node name="Heart3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_bsb1o")
+expand_mode = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Heart1" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_tdvr0")
+expand_mode = 1
+
+[node name="Coin" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_kh4ff")
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Key" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("5_fk5xb")
+expand_mode = 1
+
+[node name="EnterLevelUI" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -11.5
+offset_right = 66.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="EnterLevelUI"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="StarEndLevel" type="Label" parent="EnterLevelUI/HBoxContainer2"]
+layout_mode = 2
+text = "Star end level:"
+
+[node name="Star100Coins" type="Label" parent="EnterLevelUI/HBoxContainer2"]
+layout_mode = 2
+text = "Star 50 coins:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EnterLevelUI"]
+layout_mode = 2
+alignment = 1
+
+[node name="StarEndLevelImg" type="TextureRect" parent="EnterLevelUI/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("6_m37lo")
+expand_mode = 1
+
+[node name="StarEndLevelImgEmpty" type="TextureRect" parent="EnterLevelUI/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("7_i6hwy")
+expand_mode = 1
+
+[node name="Star100CoinsImg" type="TextureRect" parent="EnterLevelUI/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("6_m37lo")
+expand_mode = 1
+
+[node name="Star100CoinsImgEmpty" type="TextureRect" parent="EnterLevelUI/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("7_i6hwy")
+expand_mode = 1
+
+[node name="Interact" type="Label" parent="."]
+layout_mode = 2
+offset_left = 844.0
+offset_top = 605.0
+offset_right = 1076.0
+offset_bottom = 628.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_t86ug")
+text = "Text d'interaction"
+horizontal_alignment = 1
+vertical_alignment = 1

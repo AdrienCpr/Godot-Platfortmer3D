@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5mtphyuwihim"]
+
+[ext_resource type="Script" path="res://lib/heart.gd" id="1_80xni"]
+[ext_resource type="PackedScene" uid="uid://cl14fxa6jquq4" path="res://assets/Powerups and Pickups/tscn/heart.tscn" id="2_bw4b1"]
+[ext_resource type="AudioStream" uid="uid://c3cs8pig51y4x" path="res://assets/sounds/heart.wav" id="3_yrcay"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_33vos"]
+
+[node name="Heart" type="Node3D"]
+script = ExtResource("1_80xni")
+
+[node name="Heart" parent="." instance=ExtResource("2_bw4b1")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="Heart2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_yrcay")
+attenuation_model = 3
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0.0999084, 0)
+shape = SubResource("BoxShape3D_33vos")

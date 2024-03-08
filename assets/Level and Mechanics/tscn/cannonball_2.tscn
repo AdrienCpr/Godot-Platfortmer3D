@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://felfxbbwlgs5"]
+
+[ext_resource type="PackedScene" uid="uid://bmhph8yp3syy1" path="res://assets/Level and Mechanics/glTF/Cannonball.gltf" id="1_dttqn"]
+
+[node name="Cannonball2" instance=ExtResource("1_dttqn")]

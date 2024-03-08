@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhykp2mqgeqje"]
+
+[ext_resource type="PackedScene" uid="uid://dqe7oadptqsas" path="res://assets/Powerups and Pickups/glTF/Star.gltf" id="1_mnx7v"]
+
+[node name="Star2" instance=ExtResource("1_mnx7v")]

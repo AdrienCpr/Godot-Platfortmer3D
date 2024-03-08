@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://codvp5vdekk8j"]
+
+[ext_resource type="Script" path="res://lib/main.gd" id="1_vdnam"]
+[ext_resource type="PackedScene" uid="uid://fwj1gqv3rkf8" path="res://scenes/player.tscn" id="2_qhmnw"]
+[ext_resource type="PackedScene" uid="uid://du53pgiqn13ea" path="res://ui/ui_level.tscn" id="3_wx5ob"]
+[ext_resource type="PackedScene" uid="uid://btrprxb0o7mkv" path="res://ui/pause.tscn" id="4_x5qf6"]
+
+[node name="Main" type="Node3D"]
+process_mode = 3
+script = ExtResource("1_vdnam")
+
+[node name="UiLevel" parent="." instance=ExtResource("3_wx5ob")]
+
+[node name="Player" parent="." instance=ExtResource("2_qhmnw")]
+process_mode = 1
+
+[node name="Pause" parent="." instance=ExtResource("4_x5qf6")]
+
+[node name="eject_timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="iteraction_detected" from="Player" to="." method="_on_player_iteraction_detected"]
+[connection signal="iteraction_detected_end" from="Player" to="." method="_on_player_iteraction_detected_end"]
+[connection signal="timeout" from="eject_timer" to="." method="_on_eject_timer_timeout"]

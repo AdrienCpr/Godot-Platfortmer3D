@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dptub83wmxuq2"]
+
+[ext_resource type="PackedScene" uid="uid://4q81f15nbcj7" path="res://models/Enemies/Bee/Bee.gltf" id="1_kuovg"]
+
+[node name="Bee2" instance=ExtResource("1_kuovg")]
